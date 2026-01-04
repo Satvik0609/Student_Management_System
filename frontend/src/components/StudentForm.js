@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { addStudent, updateStudent, getStudentById } from '../services/StudentService';
 import { useStudentsContext } from '../context/StudentsContext';
+import { useCollaboration } from '../context/CollaborationContext';
 
 const initialSubjects = {
   mathematics: 0,
@@ -29,6 +30,7 @@ const StudentForm = ({ open, onClose, refreshStudents, editId }) => {
   const [loading, setLoading] = useState(false);
   const [checkingUsn, setCheckingUsn] = useState(false);
   const { students } = useStudentsContext() || { students: [] };
+  const { addActivity, addNotification } = useCollaboration();
 
   useEffect(() => {
     if (!open) return;
@@ -149,8 +151,12 @@ const StudentForm = ({ open, onClose, refreshStudents, editId }) => {
     try {
       if (editId) {
         await updateStudent(editId, formData);
+        addActivity({ type: 'student-edited', message: `updated ${formData.name}` });
+        addNotification({ title: 'Student Updated', message: `${formData.name}'s record has been updated` });
       } else {
         await addStudent(formData);
+        addActivity({ type: 'student-added', message: `added ${formData.name}` });
+        addNotification({ title: 'Student Added', message: `${formData.name} has been added successfully` });
       }
       refreshStudents();
       onClose();

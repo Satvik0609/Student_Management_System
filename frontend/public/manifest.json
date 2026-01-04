@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SRMS Pro",
+  "name": "Student Records Management System Pro",
+  "description": "Advanced student records management with real-time collaboration",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,25 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#4f46e5",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Add Student",
+      "short_name": "Add",
+      "description": "Quickly add a new student",
+      "url": "/?action=add",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "View Records",
+      "short_name": "Records",
+      "description": "View all student records",
+      "url": "/?panel=records",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ]
 }

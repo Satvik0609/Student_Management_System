@@ -43,11 +43,30 @@ const StudentDetailModal = ({ open, onClose, student }) => {
                 <div className="mt-3">
                   <h6>Subjects</h6>
                   <div className="row">
-                    <div className="col-sm-6">Mathematics: {student.subjects?.mathematics ?? 0}</div>
-                    <div className="col-sm-6">Physics: {student.subjects?.physics ?? 0}</div>
-                    <div className="col-sm-6">Chemistry: {student.subjects?.chemistry ?? 0}</div>
-                    <div className="col-sm-6">English: {student.subjects?.english ?? 0}</div>
-                    <div className="col-sm-6">Computer Science: {student.subjects?.computerScience ?? 0}</div>
+                    {[
+                      { label: 'Mathematics', key: 'mathematics' },
+                      { label: 'Physics', key: 'physics' },
+                      { label: 'Chemistry', key: 'chemistry' },
+                      { label: 'English', key: 'english' },
+                      { label: 'Computer Science', key: 'computerScience' }
+                    ].map((subject) => (
+                      <div className="col-sm-6 mb-2" key={subject.key}>
+                        <div className="d-flex justify-content-between">
+                          <span>{subject.label}</span>
+                          <span>{student.subjects?.[subject.key] ?? 0}</span>
+                        </div>
+                        <div className="progress" style={{ height: 6 }}>
+                          <div
+                            className="progress-bar"
+                            role="progressbar"
+                            style={{ width: `${student.subjects?.[subject.key] ?? 0}%`, background: 'var(--primary)' }}
+                            aria-valuenow={student.subjects?.[subject.key] ?? 0}
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

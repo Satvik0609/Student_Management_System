@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import { Card, CardBody } from './_primitives';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const COLORS = ['#28a745', '#dc3545', '#0d6efd', '#ffc107', '#6610f2', '#20c997'];
