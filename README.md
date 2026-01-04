@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🎓 Student Record Management System
 
 A **feature-rich Student Management System** built with **React**, **Tailwind CSS**, and **TypeScript** for managing student records, grades, and analytics. Designed to be **fully responsive** and user-friendly, with **localStorage persistence**—no backend required.  
@@ -42,37 +41,6 @@ A **feature-rich Student Management System** built with **React**, **Tailwind CS
 - Reset database option with confirmation  
 
 ---
-
-## 📂 Data Structure
-
-Example student record:
-
-```javascript
-{
-  id: "uuid-v4",
-  usn: "1DS23CG077",
-  name: "Gangisetty Satvik",
-  email: "satvik@example.com",
-  phone: "9876543210",
-  dob: "2005-05-15",
-  gender: "Male",
-  department: "Computer Science",
-  enrollmentDate: "2023-08-01",
-  address: "123 Street, City",
-  subjects: {
-    mathematics: 85,
-    physics: 90,
-    chemistry: 78,
-    english: 88,
-    computerScience: 95
-  },
-  totalMarks: 436,
-  percentage: 87.2,
-  grade: "A",
-  cgpa: 8.7,
-  status: "Pass",
-  rank: 5
-}
 
 🎨 Customization
 
@@ -128,16 +96,7 @@ Commit your changes (git commit -m "Add feature")
 Push to branch (git push origin feature/YourFeature)
 
 Open a Pull Request
-
-Guidelines:
-
-Follow existing code style
-
-Add meaningful commit messages
-
-Update documentation if needed
-
-Test your changes thoroughly
+y
 
 🗺️ Roadmap (Future Plans)
 
@@ -219,17 +178,6 @@ student-records-app/
    npm install
    ```
    
-   Create `backend/.env`:
-   ```env
-   MONGODB_URI=mongodb://localhost:27017/student-records
-   JWT_SECRET=your-secret-key-change-in-production
-   FRONTEND_URL=http://localhost:3000
-   SMTP_USER=your-email@gmail.com
-   SMTP_PASS=your-app-password
-   NODE_ENV=development
-   PORT=5000
-   ```
-   
    Start server:
    ```bash
    npm start
@@ -241,10 +189,6 @@ student-records-app/
    npm install
    npm start
    ```
-
-4. **Access Application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
 
 ## 🧱 Tech Stack
 
@@ -302,8 +246,6 @@ student-records-app/
 ## 📚 Documentation
 
 - **Frontend README:** `frontend/README.md` - Detailed frontend documentation
-- **Email Setup:** `EMAIL_SETUP.md` - Gmail verification configuration guide
-
 ## 🔌 API Endpoints
 
 ### Authentication
@@ -327,34 +269,6 @@ student-records-app/
 - **Teacher:** Add/edit/delete students, view analytics
 - **Student:** Read-only access to records and insights
 
-## 📧 Email Verification
-
-The application includes Gmail integration for email verification. See `EMAIL_SETUP.md` for detailed setup instructions.
-
-**Quick Setup:**
-1. Enable 2-Step Verification on Google Account
-2. Generate App Password: https://myaccount.google.com/apppasswords
-3. Add credentials to `backend/.env`
-
-## 🛠️ Development
-
-### Environment Variables
-
-**Backend** (`backend/.env`):
-```env
-MONGODB_URI=mongodb://localhost:27017/student-records
-JWT_SECRET=your-secret-key
-FRONTEND_URL=http://localhost:3000
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-NODE_ENV=development
-PORT=5000
-```
-
-**Frontend** (`frontend/.env`):
-```env
-REACT_APP_API_URL=http://localhost:5000/api
-```
 
 ## 📦 Build & Deploy
 
@@ -376,16 +290,6 @@ npm start
 - **Email Issues:** Check SMTP credentials in `backend/.env`
 - **Login Issues:** Clear localStorage: `localStorage.clear()`
 
-## 📄 License
-
-ISC
-
-## 👤 Author
-
-Built as a comprehensive academic success platform showcasing modern full-stack development skills.
 
 ---
 
-**Perfect for:** Portfolio projects, resume showcasing, educational institutions, learning management systems.
-
->>>>>>> a117573 (updated project upload)
